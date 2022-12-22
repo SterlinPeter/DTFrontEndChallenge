@@ -1,0 +1,333 @@
+body {
+	font-family: "Quicksand", sans-serif;
+	margin: 0;
+}
+
+/*********************** Header *****************************/
+#header {
+	display: flex;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #f0f0f0;
+	height: 90px;
+	clear: both;
+}
+#header img {
+	height: 50px;
+}
+
+#navbar a img {
+	height: 30px;
+	width: 30px;
+	margin: 5px;
+}
+
+/************************ Task container **************************/
+.task-title h3 {
+	background-color: rgb(64, 64, 255);
+	color: white;
+	padding: 8px 0;
+	border-radius: 10px 10px 0 0;
+	margin: 0 auto auto auto;
+	cursor: pointer;
+}
+#task-container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 100px;
+}
+.task {
+	width: 80%;
+	box-shadow: 1px 1px 5px #a0a0a0;
+	border-radius: 10px 10px 0 0;
+	margin: 50px 0;
+}
+
+/************************* Task List ********************************/
+ol {
+	margin-right: 30px;
+}
+
+ul {
+	list-style: disc;
+}
+li {
+	border-bottom: 2px solid rgb(176, 176, 176);
+	padding-bottom: 15px;
+	margin: 15px 0;
+}
+
+#task-list {
+	display: block;
+	z-index: 1;
+	position: absolute;
+	top: 150px;
+	left: 0;
+	min-height: 800px;
+	box-shadow: 1px 1px 5px #a0a0a0;
+	border-radius: 0 8px 0 0;
+	background-color: white;
+}
+
+.task-list-header {
+	display: flex;
+	justify-content: flex-end;
+	background-color: black;
+	color: white;
+	border-radius: inherit;
+}
+.fa-bars {
+	margin: 15px;
+	cursor: pointer;
+}
+
+.short-list {
+	display: flex;
+	justify-content: flex-end;
+	overflow: hidden;
+	max-width: auto;
+	max-height: auto;
+}
+
+.task-list-button {
+	display: block;
+	width: 30px;
+	height: 30px;
+	color: rgb(64, 64, 255);
+	border: 2px solid rgb(64, 64, 255);
+	border-radius: 8px;
+	padding: 0;
+	margin: 10px 20px 10px 30px;
+	cursor: pointer;
+}
+
+.task-list-title,
+.long-list {
+	max-width: 0;
+	max-height: 0;
+	overflow: hidden;
+}
+
+/*************************** Asset **********************************/
+.asset-title {
+	margin: 0 0 8px 0;
+	background-color: black;
+	color: white;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+	padding: 10px 0;
+}
+
+.asset-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 0 8%;
+	padding: 0 5%;
+}
+
+.asset {
+	width: 100%;
+	min-height: 100px;
+	height: fit-content;
+	box-shadow: 1px 1px 5px #a0a0a0;
+	margin: 30px auto;
+	border-radius: 10px;
+	background-color: #fcfcfc;
+	grid-column: span 2;
+}
+
+.asset:nth-child(2n - 1):last-child {
+	grid-column-end: 4;
+}
+
+/****************************** Form *******************************/
+
+select {
+	padding: 5px;
+	border: none;
+	box-shadow: 0 1px 2px #a0a0a0;
+	border-radius: 5px;
+}
+
+#eb-form,
+#tb-form {
+	text-align: left;
+}
+
+#eb-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.thread-title-div {
+	width: 100%;
+	height: 30px;
+	box-shadow: 0 0 2px #a0a0a0;
+	background-color: rgb(244, 244, 241);
+	padding-bottom: 10px;
+}
+
+.thread-title {
+	margin: 8px 0;
+	display: inline;
+	font-weight: bolder;
+}
+.sub-thread {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.sub-thread-section {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin: auto;
+}
+
+.sub-thread-section select {
+	margin: auto 0;
+}
+
+.sub-thread-section .sub-thread-div {
+	width: 100%;
+}
+
+.sub-thread-credit {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.sub-thread-option img,
+.sub-thread-option select {
+	margin: 10px 5px 10px 5px;
+}
+
+.sub-thread-div {
+	box-shadow: 1px 1px 5px #a0a0a0;
+	border-radius: 10px;
+	width: 80%;
+	background-color: rgb(223, 223, 223);
+	align-self: center;
+	margin: 10px 0;
+}
+
+.sub-thread-div p {
+	margin: 0 8px;
+}
+
+.sub-thread-div textarea,
+.thread-textarea {
+	width: calc(100% - 5px);
+	border: none;
+	padding: 0 0 0 5px;
+	border-radius: 10px;
+	resize: none;
+}
+
+.sub-thread .sub-thread-div {
+	width: 40%;
+}
+
+.thread-textarea {
+	display: block;
+	box-shadow: 1px 1px 3px #a0a0a0;
+	width: calc(70% - 5px);
+	align-self: center;
+	margin: 10px auto;
+}
+
+.reflection-textarea {
+	width: 90%;
+}
+
+.sub-thread-option {
+	display: flex;
+	width: 95%;
+	justify-content: flex-end;
+}
+
+#eb-form .sub-thread-section {
+	width: 70%;
+}
+
+/********************** Buttons & Icons *********************/
+button,
+input[type="submit"] {
+	width: fit-content;
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+	background-color: blue;
+	color: white;
+	margin: 10px 0 10px 10px;
+	font-family: "Quicksand", sans-serif;
+}
+
+button {
+	background-color: transparent;
+	color: black;
+	font-size: medium;
+	font-weight: bold;
+}
+
+.save-floppy {
+	width: 70%;
+	text-align: right;
+	margin: auto;
+}
+
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+}
+
+.icons {
+	display: inline;
+	width: 20px;
+	height: 20px;
+}
+
+.collapse-button,
+.thread-collapse-button {
+	width: fit-content;
+	margin: 0 20px 0 auto;
+	cursor: pointer;
+}
+
+.thread-collapse-button {
+	display: inline;
+	margin: 0 15px;
+}
+
+/********************* Asset content ************************/
+.media-content {
+	width: 90%;
+	height: 300px;
+}
+
+.content {
+	font-weight: bold;
+	text-align: left;
+	margin: 15px;
+}
+
+.active {
+	transform: rotateX(180deg);
+}
+
+.collapse {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	text-align: left;
+	margin: 15px;
+}
