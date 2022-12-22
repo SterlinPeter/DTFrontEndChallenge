@@ -15,6 +15,7 @@ body {
 	background-color: #f0f0f0;
 	height: 90px;
 	clear: both;
+	z-index: 10;
 }
 #header img {
 	height: 50px;
@@ -257,6 +258,10 @@ select {
 	width: 70%;
 }
 
+.collapsible-thread {
+	overflow: hidden;
+}
+
 /********************** Buttons & Icons *********************/
 button,
 input[type="submit"] {
@@ -278,9 +283,23 @@ button {
 }
 
 .save-floppy {
+	display: block;
 	width: 70%;
 	text-align: right;
 	margin: auto;
+}
+
+.new-thread-section {
+	width: 90%;
+	margin: auto;
+	text-align: right;
+}
+#eb-form .new-thread-section {
+	width: 70%;
+}
+
+#tb-form .save-floppy {
+	width: 100%;
 }
 
 .arrow {

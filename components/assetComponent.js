@@ -30,43 +30,47 @@ export const addAsset = (asset) => {
             `
             <form method="post" action="#" onsubmit="return false" id="tb-form">
 			<div class="thread-title-div">
-				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down" aria-hidden="true"></a></div>
+				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down active" aria-hidden="true"></a></div>
 				<h3 class="thread-title">Thread A</h3>
 			</div>
-			<div class="sub-thread">
-				<div class="sub-thread-div">
-					<p>Sub Thread 1</p>
-					<textarea rows="5" placeholder="Enter text here"></textarea>
+			<div class='collapsible-thread'>
+				<div class="sub-thread">
+					<div class="sub-thread-div">
+						<p>Sub Thread 1</p>
+						<textarea rows="5" placeholder="Enter text here"></textarea>
+					</div>
+					<div class="sub-thread-div">
+						<p>Sub Interpretation 1</p>
+						<textarea rows="5" placeholder="Enter text here"></textarea>
+					</div>
 				</div>
-				<div class="sub-thread-div">
-					<p>Sub Interpretation 1</p>
-					<textarea rows="5" placeholder="Enter text here"></textarea>
-				</div>
-			</div>
-			<div class='sub-thread-option'>
-				<img src="./static/img/bulb.png" class="icons" />
-				<img src="./static/img/comment.png" class="icons" />
-				<select class="dropdown">
-					<option value="" disabled selected>Select Category</option>
-				</select>
-				<select class="dropdown">
-					<option value="" disabled selected>Select Process</option>
-				</select>
-			</div>
-			<div class='sub-thread-section'>
-				<input type="submit" value="+ Sub Thread" />
-				<div class="sub-thread-div">
-					<p>Summary for Thread A</p>
-					<textarea rows="5" placeholder="Enter text here"></textarea>
-				</div>
-				<div class='sub-thread-credit'>
-					<button type="button">Thread Credit <i class="fa fa-edit"></i></button>
+				<div class='sub-thread-option'>
+					<img src="./static/img/bulb.png" class="icons" />
+					<img src="./static/img/comment.png" class="icons" />
 					<select class="dropdown">
-						<option value="" disabled selected>Select Emotion</option>
+						<option value="" disabled selected>Select Category</option>
+					</select>
+					<select class="dropdown">
+						<option value="" disabled selected>Select Process</option>
 					</select>
 				</div>
-				<input type="submit" value="+ New Thread" />
-				<a href="#"><i class="fa fa-2x fa-floppy-o" aria-hidden="true"></i></a>
+				<div class='sub-thread-section'>
+					<input type="submit" value="+ Sub Thread" />
+					<div class="sub-thread-div">
+						<p>Summary for Thread A</p>
+						<textarea rows="5" placeholder="Enter text here"></textarea>
+					</div>
+					<div class='sub-thread-credit'>
+						<button type="button">Thread Credit <i class="fa fa-edit"></i></button>
+						<select class="dropdown">
+							<option value="" disabled selected>Select Emotion</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class='new-thread-section'>
+				<input type="submit" value="+ New Thread" class='save-thread'/>
+				<a href="#" class='save-floppy'><i class="fa fa-2x fa-floppy-o" aria-hidden="true"></i></a>
 			</div>
 		</form>`
         }
@@ -77,31 +81,39 @@ export const addAsset = (asset) => {
             assetContainer.innerHTML += `
             <form onsubmit="return false" id="eb-form">
 			<div class="thread-title-div">
-				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down" aria-hidden="true"></a></div>
+				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down active" aria-hidden="true"></a></div>
 				<h3 class="thread-title">Introduction</h3>
 			</div>
-			<textarea rows="5" placeholder="Enter Introduction" class='thread-textarea'></textarea>
+			<div class='collapsible-thread'>
+				<textarea rows="5" placeholder="Enter Introduction" class='thread-textarea'></textarea>
+			</div>
 			<div class="thread-title-div">
-				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down" aria-hidden="true"></a></div>
+				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down active" aria-hidden="true"></a></div>
 				<h3 class="thread-title">Thread A</h3>
 			</div>
-			<div class='sub-thread-section'>
-				<div class="sub-thread-div">
-					<p>Example 1</p>
-					<textarea rows="5" placeholder="Enter text here"></textarea>
+			<div class='collapsible-thread'>
+				<div class='sub-thread-section'>
+					<div class="sub-thread-div">
+						<p>Example 1</p>
+						<textarea rows="5" placeholder="Enter text here"></textarea>
+					</div>
+					<input type="submit" value="+ Example" />
+					<div class="sub-thread-div">
+						<p>Argument for Thread A</p>
+						<textarea rows="5" placeholder="Enter text here"></textarea>
+					</div>
 				</div>
-				<input type="submit" value="+ Example" />
-				<div class="sub-thread-div">
-					<p>Argument for Thread A</p>
-					<textarea rows="5" placeholder="Enter text here"></textarea>
-				</div>
+			</div>
+			<div class='new-thread-section'>
 				<input type="submit" value="+ New Thread" />
 			</div>
 			<div class="thread-title-div">
-				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down" aria-hidden="true"></a></div>
+				<div class="thread-collapse-button"><a class="fa fa-2x fa-angle-down active" aria-hidden="true"></a></div>
 				<h3 class="thread-title">Conclusion</h3>
 			</div>
-			<textarea rows="5" placeholder="Enter conclusion" class='thread-textarea'></textarea>
+			<div class='collapsible-thread'>
+				<textarea rows="5" placeholder="Enter conclusion" class='thread-textarea'></textarea>
+			</div>
 			<a href="#" class='save-floppy'><i class="fa fa-2x fa-floppy-o" aria-hidden="true"></i></a>
 		</form>
             `
